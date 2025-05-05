@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="admin-section">
+  <h2>子機詳細 (ID: {{ unit[0] }})</h2>
+  <form method="post">
+    <p>名前: {{ unit[1] }}</p>
+    <p>パスワード: {{ unit[2] }}</p>
+    <p>
+      <label>残り用品在庫:<br>
+      <input type="text" name="stock" value="{{ unit[3] }}"></label>
+    </p>
+    <p>接続状態: {{ unit[4] }}</p>
+    <p>
+      <label>利用可能 (1=可/0=不可):<br>
+      <input type="text" name="available" value="{{ unit[5] }}"></label>
+    </p>
+    <button type="submit" class="btn">更新する</button>
+    <a href="{{ url_for('admin_units') }}" class="btn btn-secondary">一覧に戻る</a>
+  </form>
+</div>
+{% endblock %}

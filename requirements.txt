@@ -1,0 +1,5 @@
+Flask==2.0.3
+openpyxl==3.0.10
+pandas==1.3.5
+mysql-connector-python==8.0.29
+nfcpy==1.0.4
